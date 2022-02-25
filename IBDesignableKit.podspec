@@ -20,6 +20,6 @@ Pod::Spec.new do |spec|
   spec.swift_version = '5.5'
 
   spec.author       = { "PAN" => "winddpan@126.com" }
-  spec.source       = { :git => "hhttps://github.com/winddpan/IBDesignableKit.git" }
+  spec.source       = { :git => "https://github.com/winddpan/IBDesignableKit.git" }
   spec.source_files  = "Sources/**/*.{swift}"
 end
