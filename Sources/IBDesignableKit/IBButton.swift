@@ -11,7 +11,7 @@ import UIKit
 @IBDesignable
 open class IBButton: UIButton {
 
-    public static var layoutSubviewsInjection: (() -> Void)?
+    public static var layoutSubviewsInjection: ((IBButton) -> Void)?
 
     @IBInspectable public var cornerRadius: CGFloat = 0 {
         didSet {
@@ -136,7 +136,7 @@ open class IBButton: UIButton {
     override open func layoutSubviews() {
         super.layoutSubviews()
 
-        IBButton.layoutSubviewsInjection?()
+        IBButton.layoutSubviewsInjection?(self)
 
         if #available(iOS 15.0, *) {
             self.configuration = nil
